@@ -40,3 +40,11 @@ def test_numpy_array_fp16():
     b = cbor2.dumps(arr, default=typed_arrays.default)
     arr2 = cbor2.loads(b, tag_hook=typed_arrays.numpy_hook)
     np.testing.assert_array_equal(arr, arr2)
+
+
+def test_ndarray():
+    arr = np.random.rand(3, 10)
+    b = cbor2.dumps(arr, default=typed_arrays.default)
+    arr2 = cbor2.loads(b, tag_hook=typed_arrays.numpy_hook)
+    arr2 = arr2.reshape(3, 10)
+    np.testing.assert_array_equal(arr, arr2)
