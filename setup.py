@@ -1,15 +1,13 @@
-from setuptools import (
-    setup,
-)
+from setuptools import setup, find_packages
 
 setup(
-    name='cbor-extra',
+    name='pycbor-extra',
     version='0.1',
     description='encoding/decoding of extra types',
-    url='http://ids.isa.ru:8083/git/textapp/pycbor-extra',
+    url='ssh://git@ids:textapp/pycbor-extra',
     author='dvzubarev',
     author_email='zubarev@isa.ru',
     license='MIT',
-    packages=['cbor_extra'],
+    packages=find_packages(),
     install_requires=['cbor2', 'numpy'],
 )
