@@ -6,7 +6,7 @@ import cbor2
 
 import numpy as np
 
-import cbor_extra.typed_arrays as typed_arrays
+import pycbor_extra.typed_arrays as typed_arrays
 
 
 def test_python_array():
