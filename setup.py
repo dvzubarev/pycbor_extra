@@ -1,8 +1,9 @@
+import os
 from setuptools import setup, find_packages
 
 setup(
     name='pycbor-extra',
-    version='0.1',
+    version=os.environ.get('version', '0'),
     description='encoding/decoding of extra types',
     url='ssh://git@ids:textapp/pycbor-extra',
     author='dvzubarev',
